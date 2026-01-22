@@ -5,4 +5,8 @@
 ## Version: 0.1.0
 ## SavedVariablesPerCharacter: YemWhisperAlertDB
 
-Yem-Whisper-Alert.lua
+
+Core.lua
+Warning.lua
+Sound.lua
+ToggleButton.lua
