@@ -1,0 +1,8 @@
+## Interface: 120000
+## Title: Yem Whisper Alert
+## Notes: Shows a big warning and plays a sound when you receive a whisper
+## Author: Yem
+## Version: 0.1.0
+## SavedVariablesPerCharacter: YemWhisperAlertDB
+
+Yem-Whisper-Alert.lua
