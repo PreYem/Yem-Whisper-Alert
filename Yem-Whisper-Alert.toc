@@ -11,3 +11,4 @@ Alert.lua
 Sound.lua
 ToggleButton.lua
 Commands.lua
+AutoDungRoleCheck.lua
