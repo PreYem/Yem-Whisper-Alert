@@ -12,13 +12,17 @@ text:SetPoint("CENTER")
 toggleButton:SetHighlightTexture("Interface\\Buttons\\UI-Common-MouseHilight", "ADD")
 toggleButton:RegisterForClicks("LeftButtonUp")
 
-function YemWhisperAlert_UpdateToggleUI()
+function YemWhisperAlert_UpdateToggleUI(silent)
     if YemWhisperAlertDB.enabled then
         text:SetText("|cff00ff00Whisper Alert: ON|r")
-        print(YemWhisperAlert.PREFIX .. " Warnings |cff00ff00enabled|r.")
+        if not silent then
+            print(YemWhisperAlert.PREFIX .. " Alerts are |cff00ff00ON|r.")
+        end
     else
         text:SetText("|cffff0000Whisper Alert: OFF|r")
-        print(YemWhisperAlert.PREFIX .. " Warnings |cffff0000disabled|r.")
+        if not silent then
+            print(YemWhisperAlert.PREFIX .. " Alerts are |cffff0000OFF|r.")
+        end
     end
 end
 
@@ -29,7 +33,7 @@ toggleButton:SetScript("OnClick", function()
         YemWhisperAlert_RestoreVolume()
     end
 
-    YemWhisperAlert_UpdateToggleUI()
+    YemWhisperAlert_UpdateToggleUI(true)
 end)
 
 function YemWhisperAlert_ShowButton()

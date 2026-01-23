@@ -6,17 +6,17 @@ SlashCmdList["YEMWHISPERALERT"] = function(msg)
 
     if msg == "on" then
         YemWhisperAlert_ShowButton()
-        print(YemWhisperAlert.PREFIX .. " UI is |cff00ff00ON|r")
+        print(YemWhisperAlert.PREFIX .. " UI is |cff00ff00ON|r.")
         return
     end
 
     if msg == "off" then
         YemWhisperAlert_HideButton()
-        print(YemWhisperAlert.PREFIX .. " UI |cffff0000OFF|r")
+        print(YemWhisperAlert.PREFIX .. " UI |cffff0000OFF|r.")
         return
     end
 
     print(YemWhisperAlert.PREFIX .. " |cffffff00List of currently usable commands : |r")
-    print("|cff00ff00/yemwa on|r  - Show toggle button")
-    print("|cffff0000/yemwa off|r - Hide toggle button")
+    print("|cff00ff00/yemwa on|r  - Show toggle button.")
+    print("|cffff0000/yemwa off|r - Hide toggle button.")
 end

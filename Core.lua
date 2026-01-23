@@ -27,11 +27,11 @@ frame:SetScript("OnEvent", function(_, event, arg1)
         end
 
         InitDB()
-        YemWhisperAlert_UpdateToggleUI()
+        YemWhisperAlert_UpdateToggleUI(true)
 
         if YemWhisperAlertDB.showButton then
             YemWhisperAlert_ShowButton()
-            print(YemWhisperAlert.PREFIX .. " - UI is |cff00ff00shown|r. Use |cffffff00/yemwa off|r to hide it.")
+            print(YemWhisperAlert.PREFIX .. " - UI is |cff00ff00ON|r. Use |cffffff00/yemwa off|r to hide it.")
         else
             YemWhisperAlert_HideButton()
             print(YemWhisperAlert.PREFIX .. " - UI is |cffff0000OFF|r. Use |cffffff00/yemwa on|r to show it.")
