@@ -15,14 +15,13 @@ toggleButton:RegisterForClicks("LeftButtonUp")
 function YemWhisperAlert_UpdateToggleUI(silent)
     if YemWhisperAlertDB.enabled then
         text:SetText("|cff00ff00Whisper Alert: ON|r")
-        if not silent then
-            print(YemWhisperAlert.PREFIX .. " Alerts are |cff00ff00ON|r.")
-        end
+        print(YemWhisperAlert.PREFIX .. " - Alerts are now |cff00ff00ON|r.")
+
     else
         text:SetText("|cffff0000Whisper Alert: OFF|r")
-        if not silent then
-            print(YemWhisperAlert.PREFIX .. " Alerts are |cffff0000OFF|r.")
-        end
+        print(YemWhisperAlert.PREFIX .. " - Alerts are now |cffff0000OFF|r.")
+
+
     end
 end
 

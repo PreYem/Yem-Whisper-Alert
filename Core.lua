@@ -11,8 +11,10 @@ frame:RegisterEvent("ADDON_LOADED")
 frame:RegisterEvent("CHAT_MSG_WHISPER")
 
 local function InitDB()
+    YemWhisperAlertDB = YemWhisperAlertDB or {}
+
     if YemWhisperAlertDB.enabled == nil then
-        YemWhisperAlertDB.enabled = false -- AFK / loud mode
+        YemWhisperAlertDB.enabled = false
     end
 
     if YemWhisperAlertDB.showButton == nil then
