@@ -15,15 +15,16 @@ toggleButton:RegisterForClicks("LeftButtonUp")
 function YemWhisperAlert_UpdateToggleUI()
     if YemWhisperAlertDB.enabled then
         text:SetText("|cff00ff00Whisper Alert: ON|r")
+        print(YemWhisperAlert.PREFIX .. " Warnings |cff00ff00enabled|r.")
     else
         text:SetText("|cffff0000Whisper Alert: OFF|r")
+        print(YemWhisperAlert.PREFIX .. " Warnings |cffff0000disabled|r.")
     end
 end
 
 toggleButton:SetScript("OnClick", function()
     YemWhisperAlertDB.enabled = not YemWhisperAlertDB.enabled
 
-    -- Critical safety hook: restore volume when disabling
     if not YemWhisperAlertDB.enabled then
         YemWhisperAlert_RestoreVolume()
     end
@@ -31,3 +32,12 @@ toggleButton:SetScript("OnClick", function()
     YemWhisperAlert_UpdateToggleUI()
 end)
 
+function YemWhisperAlert_ShowButton()
+    toggleButton:Show()
+    YemWhisperAlertDB.showButton = true
+end
+
+function YemWhisperAlert_HideButton()
+    toggleButton:Hide()
+    YemWhisperAlertDB.showButton = false
+end

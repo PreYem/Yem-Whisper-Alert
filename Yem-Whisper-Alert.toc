@@ -10,3 +10,4 @@ Core.lua
 Warning.lua
 Sound.lua
 ToggleButton.lua
+Commands.lua
